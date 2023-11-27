@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 
-import Events from './Events';
+import Details from './Details';
 
 function App() {
   return (
     <div className="App">
-
-      <Events/>
+      
+      <Details/>
 
     </div>
   );
