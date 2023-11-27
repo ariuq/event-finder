@@ -1,40 +1,38 @@
-div{
+.footer{
+    display: flex;
+    justify-content: space-between;
     background:black ;
     color:rgba(42, 240, 193, 100%); 
     font-size: 14px;
+    margin-top: 80px;
 }
-.Logo1{
-    padding-left: 20px;
-    margin-top: 20px;
-}
-div input{
+
+.footer input{
     position: absolute;
     border: 1px solid rgba(42, 240, 193, 100%);
     border-radius: 5px;
     padding: 5px;
     background-color: black;
     color: rgba(42, 240, 193, 100%);
-    left: 20%;
-    top: 6%;
+    
 }
+
 ::placeholder{
     color:rgba(42, 240, 193, 50%);
     
 }
-.header{
-    display: flex;
-    justify-content: space-between;
+
+.Logo2{
+    padding-left: 20px;
 }
-.add{
+.Connect{
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    padding-right: 30px;
-    gap: 20px;
-}
-.plus{
     flex-direction: column;
     align-items: center;
-    display: flex;
+    padding-right: 100px;
+
+}
+.link img {
+    padding-left: 10px;
     
 }

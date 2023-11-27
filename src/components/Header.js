@@ -9,10 +9,10 @@ import '../style/Header.css'
 const Header = () => {
   return (
     <div className='header'>
-      <img  className='Logo' src={logo}/>
+      <img  className='Logo1' src={logo}/>
       <div>
       
-        <input type='text' placeholder= 'Search events...'>    
+        <input id='search' type='text' placeholder= 'Search events...'>    
         </input>
       </div>
        <div className='add'>
