@@ -1,13 +1,30 @@
 import React from 'react'
 import logo from '../assets/Logo1.png'
+import search from '../assets/magnifying-glass-solid.svg'
+import plus from '../assets/plus.svg'
+import login from '../assets/login.svg'
+
 import '../style/Header.css'
 
 const Header = () => {
   return (
-    <div>
-      <img src={logo}/>
-        
+    <div className='header'>
+      <img  className='Logo' src={logo}/>
+      <div>
       
+        <input type='text' placeholder= 'Search events...'>    
+        </input>
+      </div>
+       <div className='add'>
+        <div className='plus'>
+           <img src={plus}/>
+           <p>Add Event</p>
+        </div>
+        <div className='plus'>
+           <img src={login}/>
+           <p>Login</p>
+        </div>    
+       </div>
     </div>
   )
 }
