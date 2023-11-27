@@ -7,7 +7,7 @@ div{
     padding-left: 20px;
     margin-top: 20px;
 }
-div input{
+.header input{
     position: absolute;
     border: 1px solid rgba(42, 240, 193, 100%);
     border-radius: 5px;

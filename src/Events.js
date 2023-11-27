@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import poster from './assets/poster.png'
 import Card from './components/Card'
-import event1 from'./assets/event1.png'
+import event1 from './assets/event1.png'
 import Footer from './components/Footer'
 import './style/Events.css'
 const Events = () => {
