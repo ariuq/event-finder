@@ -1,0 +1,69 @@
+.register {
+    background-color: black;
+    display: flex;
+    color: #2AF0C1;
+    height: 100vh;
+}
+.logo1 {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+}
+.register-robot {
+    margin-left: 3%;
+}
+.register-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.register-inputs h2 {
+    font-size: 16px;
+}
+.small-inputs {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+}
+.small-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#date {
+    width: 150px;
+    background:none;
+    color: #2AF0C1 !important;
+    border: 1px solid #2AF0C1;
+    border-radius: 50px;
+    padding: 7px 10px;
+    margin-top: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    
+  filter: invert(89%) sepia(84%) saturate(5161%) hue-rotate(83deg) brightness(102%) contrast(92%);
+  }
+  input[type="file"] {
+    display: none;
+  }
+.custom-file-input {
+    width: 150px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    background-color: #2AF0C1;
+    border: 1px solid #2AF0C1;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    
+}
+.file-label {
+    position: absolute;
+    font-size: 12px;
+    right: 0;
+    bottom: -15px;
+}

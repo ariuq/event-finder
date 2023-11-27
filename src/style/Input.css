@@ -1,10 +1,10 @@
 .inputs {
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
+    padding: 2px 0px;
     font-size: 16px;
 }
-input {
+.big-input {
     background: none;
     border: 1px solid #2AF0C1;
     border-radius: 50px;
