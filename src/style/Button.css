@@ -1,0 +1,15 @@
+.button-contgainer {
+    display: flex;
+    justify-content: center;
+}
+.solid-button {
+    background-color: #2AF0C1;
+    width: 370px;
+    border: none;
+    border-radius: 50px;
+    padding: 7px 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+}
