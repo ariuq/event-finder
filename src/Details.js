@@ -27,9 +27,10 @@ const Details = () => {
         </p>
         <div className='order-button'>
         <button>Order</button>
+      
 
         </div>
-        
+        <Footer/>
         </div>
         
         
