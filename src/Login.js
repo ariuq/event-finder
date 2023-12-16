@@ -8,6 +8,11 @@ import Button from './components/Button';
 import Contact from './components/Contact';
 
 const Login = () => {
+
+  const handleSubmit =() => {
+
+    console.log("hello")
+  }
   return (
     <div className='main'>
     <img src={logo} className='logo'/>
@@ -18,7 +23,7 @@ const Login = () => {
         <Input inputName="Username:"/>
         <Input inputName="Password:"/>
         </div>
-        <Button name="Login"/>
+        <Button name="Login" to='/events'/>
         <div className='other'>
             <p>Do not have an account? <button className='simple-button'>Register</button></p>
             <Contact/>
