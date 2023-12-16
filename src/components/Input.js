@@ -1,11 +1,11 @@
 import React from 'react'
 import "../style/Input.css"
 
-const Input = ({inputName}) => {
+const Input = ({inputName, inputfunctionName, type, value}) => {
   return (
     <div className='inputs'>
       <label for={inputName}>{inputName}</label>
-      <input className='big-input' type='text' name={inputName} id={inputName}/>
+      <input className='big-input' type={type} name={inputName} id={inputName} onChange={inputfunctionName} value={value}/>
     </div>
   )
 }
