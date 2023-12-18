@@ -6,21 +6,21 @@ import search from "../assets/search.png"
 
 import '../style/Header.css'
 
-const Header = () => {
+const Header = ({img, classname, name, functionName, addEvent}) => {
   return (
     <div className='header'>
       <img  className='Logo1' src={logo}/>
       <label className='header-input'>
         <input id='search' type='text' placeholder= 'Search events...'/>    
       </label>
-       <div className='add'>
-        <div className='plus'>
+       <div className='add' onClick={addEvent}>
+        <div className={classname}>
            <img src={plus}/>
            <p>Add Event</p>
         </div>
-        <div className='plus'>
-           <img src={login}/>
-           <p>Login</p>
+        <div className='plus' onClick={functionName}>
+           <img src={img}/>
+           <p>{name}</p>
         </div>    
        </div>
     </div>

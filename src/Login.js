@@ -6,10 +6,13 @@ import charm from "./assets/charm1.png"
 import Input from './components/Input';
 import Button from './components/Button';
 import Contact from './components/Contact';
-import { database } from './FirebaseConfig';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { database } from './FirebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useAuth } from './AuthContext';
+
 const Login = () => {
+  const { isLogin, setLogin } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useNavigate();
@@ -20,11 +23,15 @@ const Login = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  const handleSubmit = () => {
-    createUserWithEmailAndPassword(database, email, password).then(data => {
-      console.log(data, 'authData')
-      history('/events')
-    })
+  const handleSubmit = async () => {
+    try {
+      const data = await signInWithEmailAndPassword(database, email, password);
+      console.log(data, 'authData');
+      setLogin(true);
+      history('/', { state: { isLogin: true } });
+    } catch (error) {
+      console.error('Error logging in:', error);
+    }
   };
 
   return (

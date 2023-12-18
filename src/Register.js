@@ -14,8 +14,7 @@ const Register = () => {
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [password, setPassword] = useState('');
-  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const history = useNavigate();
 
@@ -25,10 +24,19 @@ const Register = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  };
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
   const handleSubmit = () => {
-    createUserWithEmailAndPassword(database, email, password).then(data => {
+    createUserWithEmailAndPassword(database, email, password, fullName, username, confirmPassword).then(data => {
       console.log(data, 'authData')
-      history('/events')
+      history('/login')
     })
   };
   return (

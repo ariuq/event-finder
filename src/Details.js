@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import './style/Details.css'
 
 const Details = () => {
+  // const { name, image, address, month, day, description } = event;
   return (
     <div className='details'>
         <img src={details} width='50%' />

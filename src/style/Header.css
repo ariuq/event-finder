@@ -36,5 +36,16 @@ div{
     flex-direction: column;
     align-items: center;
     display: flex;
+    justify-content: center;
     
+}
+.hide {
+    display: none;
+}
+.add-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
 }
