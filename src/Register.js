@@ -33,6 +33,9 @@ const Register = () => {
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
+  const loginClick = () =>{
+    history('/login')
+  }
   const handleSubmit = () => {
     createUserWithEmailAndPassword(database, email, password, fullName, username, confirmPassword).then(data => {
       console.log(data, 'authData')
@@ -56,7 +59,7 @@ const Register = () => {
         </div>
         <Button name="Register" functionName={handleSubmit}/>
         <div className='other'>
-            <p>Yes i have an account? <button className='simple-button'>Login</button></p>
+            <p>Yes i have an account? <button className='simple-button' onClick={loginClick}>Login</button></p>
             <Contact/>
         </div>
       </div>

@@ -23,6 +23,9 @@ const Login = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const registerClick = () =>{
+    history('/register')
+  }
   const handleSubmit = async () => {
     try {
       const data = await signInWithEmailAndPassword(database, email, password);
@@ -46,7 +49,7 @@ const Login = () => {
         </div>
         <Button name="Login" functionName={handleSubmit} disable={false}/>
         <div className='other'>
-          <p>Do not have an account? <button className='simple-button'>Register</button></p>
+          <p>Do not have an account? <button className='simple-button' onClick={registerClick}>Register</button></p>
           <Contact/>
         </div>
       </div>
