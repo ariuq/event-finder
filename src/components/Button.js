@@ -5,10 +5,9 @@ import "../style/Button.css"
 const Button = ({ name, to, functionName, disable }) => {
   return (
       <Link to={to} className='button-container'>
-      <button onClick={functionName} className='solid-button' disabled={disable}>
+      <button onClick={functionName} className='solid-button'>
       {name}
       </button>
-        
       </Link>
   );
 };

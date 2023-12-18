@@ -14,16 +14,13 @@
 }
 
 .Event-Detail{
-    width: 30%;
     display: flex;
     margin-top: -200px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.details h1 {
-    margin-left: -120px;
-}
+
 .order-button{
     width: 100%;
     display: flex;

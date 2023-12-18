@@ -28,7 +28,7 @@ const Login = () => {
       const data = await signInWithEmailAndPassword(database, email, password);
       console.log(data, 'authData');
       setLogin(true);
-      history('/', { state: { isLogin: true } });
+      history('/');
     } catch (error) {
       console.error('Error logging in:', error);
     }
@@ -44,7 +44,7 @@ const Login = () => {
           <Input inputName="Email:" inputfunctionName={handleEmailChange}/>
           <Input inputName="Password:" inputfunctionName={handlePasswordChange} type="password"/>
         </div>
-        <Button name="Login" functionName={handleSubmit}/>
+        <Button name="Login" functionName={handleSubmit} disable={false}/>
         <div className='other'>
           <p>Do not have an account? <button className='simple-button'>Register</button></p>
           <Contact/>

@@ -25,7 +25,7 @@ const EventList = ({ eventData, eventType }) => {
       <Carousal itemsToShow={2} outerSpacing={0} pagination={false}>
         {filteredEvents.map((event, index) => (
         <div key={index} className='cart'>
-            <Link to={`/event-detail/${index}`} >
+            <Link to={`/event-detail/${event.eventName}`} >
             <Card
                 companyName={event.companyName}
                 type={event.type}

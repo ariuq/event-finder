@@ -26,13 +26,13 @@ const Add = () => {
     const [buttonDisable, setButtonDisable] = useState(true);
 
     const handleFileChange = async (event) => {
+      setSelectedFile('Loading');
         const file = event.target.files[0];
         const imgs = ref(storage, `Imgs/${v4()}`);
         
         try {
           const [uploadResult] = await Promise.all([
             uploadBytes(imgs, file),
-            // Add any other asynchronous operations here if needed
           ]);
       
           const downloadURL = await getDownloadURL(uploadResult.ref);
@@ -40,13 +40,12 @@ const Add = () => {
           setSelectedFile(file);
         } catch (error) {
           console.error('Error uploading file:', error);
-          // Handle the error appropriately, e.g., show an error message
         }
       };
       const addEvent = async () => {
         const valRef = collection(firestore, "Events");
       
-        if (name === '' || companyName === '' || location === '' || explanation === '' || date === '' || type === 'Select type' || selectedFile == null) {
+        if (name === '' || companyName === '' || location === '' || explanation === '' || date === '' || type === 'Select type' || selectedFile == 'Loading') {
           alert("Бүх талбарыг гүйцэт бөглөнө үү");
         } else {
           try {
@@ -130,9 +129,15 @@ const Add = () => {
                         <img src={upload}/>
                     </label>
                     {selectedFile && (
-                        <div className="file-label">
+                        selectedFile=='Loading' ? (
+                          <div className="file-label">
+                            Selected File: Loading...
+                        </div>
+                        ) : (
+                          <div className="file-label">
                             Selected File: {selectedFile.name}
                         </div>
+                        )
                     )}
                 </div>
                 
