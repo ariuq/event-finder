@@ -45,7 +45,7 @@ useEffect(() => {
   return (
     <div>   
       <Header name={isLogin ? 'Logout' : 'Login'} functionName={isLogin? logOut: logIn} img={isLogin? Logout : login} classname={isLogin? 'add-icon':'hide' } addEvent={isLogin? addEvent:null}/>
-      <img src={poster } width='100%' height='100%'/>
+      <img src={poster}  className='event-poster'/>
       <EventList eventData={data} eventType="Education"/>
       <EventList eventData={data} eventType="Art"/>
       <EventList eventData={data} eventType="Volunteer"/>
